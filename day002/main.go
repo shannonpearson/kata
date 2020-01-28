@@ -9,7 +9,6 @@ import (
 func CountBits(num uint) int {
 	n := uint64(num)
 	bin := strconv.FormatUint(n, 2)
-	fmt.Println("Binary:", bin)
 	count := 0
 	for _, char := range bin {
 		if char == '1' {
