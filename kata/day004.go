@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package kata
 
 func calcHourlySpeed(d float64, s int) float64 {
 	return (3600.0 * d) / float64(s)
@@ -24,10 +22,4 @@ func Gps(s int, x []float64) int {
 	}
 
 	return int(highest)
-}
-
-func main() {
-	s := 15
-	x := []float64{0.0, 0.19, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25}
-	fmt.Println(Gps(s, x))
 }

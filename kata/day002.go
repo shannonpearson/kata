@@ -1,7 +1,6 @@
-package main
+package kata
 
 import (
-	"fmt"
 	"strconv"
 )
 
@@ -22,8 +21,3 @@ func CountBits(num uint) int {
 // 	return bits.OnesCount(n) // from math/bits packate
 // 	return strings.Count(strconv.FormatInt(int64(n), 2), "1")
 // }
-
-func main() {
-	result := CountBits(102)
-	fmt.Println(result)
-}

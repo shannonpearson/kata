@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package kata
 
 // MaximumSubarraySum returns the maximum sum of any set of contiguous values in a slice
 func MaximumSubarraySum(numbers []int) int {
@@ -18,9 +16,4 @@ func MaximumSubarraySum(numbers []int) int {
 		}
 	}
 	return max
-}
-
-func main() {
-	nums := []int{-2, 1, -3, 4, -1, 2, 1, -5, 4}
-	fmt.Println(MaximumSubarraySum(nums))
 }

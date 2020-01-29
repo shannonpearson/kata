@@ -1,4 +1,4 @@
-package main
+package kata
 
 // TwoSum takes an array of integers and a target numbers and returns the
 // indices of the integers whose sum is equal to the target number.

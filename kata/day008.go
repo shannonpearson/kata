@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package kata
 
 // PosPeaks hold positions and values of peaks.
 type PosPeaks struct {
@@ -26,9 +24,4 @@ func PickPeaks(array []int) PosPeaks {
 	}
 
 	return peaks
-}
-
-func main() {
-	input := []int{3, 2, 3, 6, 4, 1, 2, 3, 2, 1, 2, 3}
-	fmt.Println(PickPeaks(input))
 }

@@ -1,10 +1,7 @@
-package main
-
-import "fmt"
+package kata
 
 // BouncingBall calculates the number of times a ball bounces in front of a window.
 func BouncingBall(height, bounce, window float64) int {
-	// your code
 	if height <= 0 || bounce <= 0 || bounce >= 1 || window >= height {
 		return -1
 	}
@@ -16,8 +13,4 @@ func BouncingBall(height, bounce, window float64) int {
 	}
 
 	return count
-}
-
-func main() {
-	fmt.Println(BouncingBall(3.0, 0.66, 1.5))
 }

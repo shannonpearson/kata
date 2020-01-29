@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package kata
 
 // FindOdd finds the integer in a slice of ints that appears an odd number of times
 func FindOdd(seq []int) int {
@@ -19,11 +17,4 @@ func FindOdd(seq []int) int {
 		}
 	}
 	return 0
-}
-
-func main() {
-	input := []int{
-		20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5,
-	}
-	fmt.Println(FindOdd(input))
 }

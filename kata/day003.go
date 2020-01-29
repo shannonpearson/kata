@@ -1,4 +1,4 @@
-package main
+package kata
 
 import (
 	"fmt"
@@ -26,8 +26,4 @@ func DigPow(n, p int) int {
 		return sum / n
 	}
 	return -1
-}
-
-func main() {
-	fmt.Println(DigPow(46288, 3))
 }
