@@ -15,7 +15,3 @@ outer:
 	}
 	return indices
 }
-func main() {
-	numbers := []int{4, 5, 2, 9}
-	TwoSum(numbers, 13)
-}
