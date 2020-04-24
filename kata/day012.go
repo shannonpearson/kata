@@ -8,8 +8,8 @@ import (
 
 // there is probably a faster way to find all the factors...
 func getPrimeFactors(i int) []int {
-	c := i
 	i = int(math.Abs(float64(i)))
+	c := i
 
 	factors := []int{}
 	for j := 2; j <= int(math.Sqrt(float64(i))); j++ {
