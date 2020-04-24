@@ -45,7 +45,7 @@ func SumOfDivided(lst []int) string {
 	for _, n := range lst {
 		factors := getPrimeFactors(n)
 		for _, f := range factors {
-			if dict[f] == nil {
+			if dict[f] == nil && f != -n {
 				dict[f] = []int{}
 				primes = append(primes, f)
 			}
