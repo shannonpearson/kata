@@ -15,5 +15,5 @@ go test
 
 ```
 bundle
-bundle exec rspec spec
+rake
 ```
