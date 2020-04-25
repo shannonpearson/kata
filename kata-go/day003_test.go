@@ -1,10 +1,9 @@
-package kata_test
+package kata
 
 import (
 	"testing"
 
 	colors "github.com/logrusorgru/aurora"
-	"github.com/shannonpearson/kata-go/kata"
 )
 
 type digPowTestCase struct {
@@ -23,7 +22,7 @@ var digPowTests = []digPowTestCase{
 // TestDigPow tests kata DigPow solution
 func TestDigPow(t *testing.T) {
 	for _, c := range digPowTests {
-		v := kata.DigPow(c.n, c.p)
+		v := DigPow(c.n, c.p)
 		if v != c.expected {
 			t.Errorf("For %v, %d expected %v got %v", colors.BrightYellow(c.n), colors.BrightYellow(c.p), colors.BrightGreen(c.expected), colors.BrightRed(v))
 		}

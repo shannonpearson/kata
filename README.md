@@ -6,7 +6,6 @@
 
 ```
 cd kata-go
-cd kata_test
 go test
 ```
 

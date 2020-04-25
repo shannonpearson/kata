@@ -1,10 +1,9 @@
-package kata_test
+package kata
 
 import (
 	"testing"
 
 	colors "github.com/logrusorgru/aurora"
-	"github.com/shannonpearson/kata-go/kata"
 )
 
 type findOddTestCase struct {
@@ -24,7 +23,7 @@ var findOddTests = []findOddTestCase{
 // TestFindOdd tests kata FindOdd solution
 func TestFindOdd(t *testing.T) {
 	for _, c := range findOddTests {
-		v := kata.FindOdd(c.seq)
+		v := FindOdd(c.seq)
 		if v != c.expected {
 			t.Errorf("For %v expected %d got %d", colors.BrightYellow(c.seq), colors.BrightGreen(c.expected), colors.BrightRed(v))
 		}

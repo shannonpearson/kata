@@ -1,10 +1,9 @@
-package kata_test
+package kata
 
 import (
 	"testing"
 
 	colors "github.com/logrusorgru/aurora"
-	"github.com/shannonpearson/kata-go/kata"
 )
 
 type gpsTestCase struct {
@@ -21,7 +20,7 @@ var gpsTests = []gpsTestCase{
 // TestGps tests kata Gps solution
 func TestGps(t *testing.T) {
 	for _, c := range gpsTests {
-		v := kata.Gps(c.s, c.x)
+		v := Gps(c.s, c.x)
 		if v != c.expected {
 			t.Errorf("For %d, %v expected %v got %v", colors.BrightYellow(c.s), colors.BrightYellow(c.x), colors.BrightGreen(c.expected), colors.BrightRed(v))
 		}

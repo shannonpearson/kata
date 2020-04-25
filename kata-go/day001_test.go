@@ -1,10 +1,9 @@
-package kata_test
+package kata
 
 import (
 	"testing"
 
 	colors "github.com/logrusorgru/aurora"
-	"github.com/shannonpearson/kata-go/kata"
 )
 
 type twoSumTestCase struct {
@@ -22,7 +21,7 @@ var twoSumTests = []twoSumTestCase{
 // TestTwoSum tests kata TwoSum solution
 func TestTwoSum(t *testing.T) {
 	for _, c := range twoSumTests {
-		v := kata.TwoSum(c.numbers, c.target)
+		v := TwoSum(c.numbers, c.target)
 		if v != c.expected {
 			t.Errorf("For %v, %d expected %v got %v", colors.BrightYellow(c.numbers), colors.BrightYellow(c.target), colors.BrightGreen(c.expected), colors.BrightRed(v))
 		}

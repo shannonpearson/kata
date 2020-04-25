@@ -53,7 +53,6 @@ func SumOfDivided(lst []int) string {
 		}
 
 	}
-	fmt.Println(dict)
 
 	sort.Ints(primes)
 	for _, value := range primes {
