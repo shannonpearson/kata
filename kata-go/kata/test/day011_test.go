@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	colors "github.com/logrusorgru/aurora"
+	"github.com/shannonpearson/kata/kata-go/kata/kata"
 )
 
 var passStrings = []string{
@@ -33,7 +34,7 @@ var failStrings = []string{
 // TestAlphanumericTrue tests true alphanumeric
 func TestAlphanumericTrue(t *testing.T) {
 	for _, s := range passStrings {
-		v := Alphanumeric(s)
+		v := kata.Alphanumeric(s)
 		if v != true {
 			t.Errorf("For %v expected %v got %v", colors.BrightYellow(s), colors.BrightGreen("true"), colors.BrightRed("false"))
 		}
@@ -43,7 +44,7 @@ func TestAlphanumericTrue(t *testing.T) {
 // TestAlphanumericFalse tests false alphanumeric
 func TestAlphanumericFalse(t *testing.T) {
 	for _, s := range failStrings {
-		v := Alphanumeric(s)
+		v := kata.Alphanumeric(s)
 		if v == true {
 			t.Errorf("For %v expected %v got %v", colors.BrightYellow(s), colors.BrightGreen("false"), colors.BrightRed("true"))
 		}

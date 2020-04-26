@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	colors "github.com/logrusorgru/aurora"
+	"github.com/shannonpearson/kata/kata-go/kata/kata"
 )
 
 var inputs = [...][]int{
@@ -25,7 +26,7 @@ var solutions = []string{
 // TestSumOfDivided tests SumOfDivided
 func TestSumOfDivided(t *testing.T) {
 	for i, a := range inputs {
-		v := SumOfDivided(a)
+		v := kata.SumOfDivided(a)
 		if v != solutions[i] {
 			t.Errorf("For %v expected %v got %v", colors.BrightYellow(inputs[i]), colors.BrightGreen(solutions[i]), colors.BrightRed(v))
 		}

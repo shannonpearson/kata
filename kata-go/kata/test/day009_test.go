@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	colors "github.com/logrusorgru/aurora"
+	"github.com/shannonpearson/kata/kata-go/kata/kata"
 )
 
 type backwardsPrimeTestCase struct {
@@ -21,7 +22,7 @@ var backwardsPrimeTests = []backwardsPrimeTestCase{
 // TestBackwardsPrime tests kata BackwardsPrime solution
 func TestBackwardsPrime(t *testing.T) {
 	for _, c := range backwardsPrimeTests {
-		v := BackwardsPrime(c.start, c.stop)
+		v := kata.BackwardsPrime(c.start, c.stop)
 		eq := true
 		if (c.expected == nil && v != nil) || (v == nil && c.expected != nil) {
 			eq = false

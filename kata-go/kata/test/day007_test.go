@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	colors "github.com/logrusorgru/aurora"
+	"github.com/shannonpearson/kata/kata-go/kata/kata"
 )
 
 type maximumSubarraySumTestCase struct {
@@ -20,7 +21,7 @@ var maximumSubarraySumTests = []maximumSubarraySumTestCase{
 // TestMaximumSubarraySum tests kata MaximumSubarraySum solution
 func TestMaximumSubarraySum(t *testing.T) {
 	for _, c := range maximumSubarraySumTests {
-		v := MaximumSubarraySum(c.numbers)
+		v := kata.MaximumSubarraySum(c.numbers)
 		if v != c.expected {
 			t.Errorf("For %v expected %d got %d", colors.BrightYellow(c.numbers), colors.BrightGreen(c.expected), colors.BrightRed(v))
 		}

@@ -1,1 +1,2 @@
 **/node_modules
+robocopy . test day001_test.go day002_test.go day003_test.go day004_test.go day005_test.go day006_test.go day007_test.go day008_test.go day009_test.go day010_test.go day011_test.go day012_test.go

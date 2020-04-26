@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	colors "github.com/logrusorgru/aurora"
+	"github.com/shannonpearson/kata/kata-go/kata/kata"
 )
 
 type bouncingBallTestCase struct {
@@ -24,7 +25,7 @@ var bouncingBallTests = []bouncingBallTestCase{
 // TestBouncingBall tests kata BouncingBall solution
 func TestBouncingBall(t *testing.T) {
 	for _, c := range bouncingBallTests {
-		v := BouncingBall(c.height, c.bounce, c.window)
+		v := kata.BouncingBall(c.height, c.bounce, c.window)
 		if v != c.expected {
 			t.Errorf("For %f, %f, %f expected %d got %d", colors.BrightYellow(c.height), colors.BrightYellow(c.bounce), colors.BrightYellow(c.window), colors.BrightGreen(c.expected), colors.BrightRed(v))
 		}

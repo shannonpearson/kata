@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	colors "github.com/logrusorgru/aurora"
+	"github.com/shannonpearson/kata/kata-go/kata/kata"
 )
 
 var (
@@ -29,7 +30,7 @@ var createSpiralTests = []createSpiralTestCase{
 // TestCreateSpiral tests kata CreateSpiral solution
 func TestCreateSpiral(t *testing.T) {
 	for _, c := range createSpiralTests {
-		v := CreateSpiral(c.n)
+		v := kata.CreateSpiral(c.n)
 		eq := true
 		if v == nil || c.expected == nil {
 			if len(v) != len(c.expected) {

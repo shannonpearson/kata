@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	colors "github.com/logrusorgru/aurora"
+	"github.com/shannonpearson/kata/kata-go/kata/kata"
 )
 
 type countBitsTestCase struct {
@@ -22,7 +23,7 @@ var countBitsTests = []countBitsTestCase{
 // TestCountBits tests kata CountBits solution
 func TestCountBits(t *testing.T) {
 	for _, c := range countBitsTests {
-		v := CountBits(c.num)
+		v := kata.CountBits(c.num)
 		if v != c.expected {
 			t.Errorf("For %d expected %d got %d", colors.BrightYellow(c.num), colors.BrightGreen(c.expected), colors.BrightRed(v))
 		}
